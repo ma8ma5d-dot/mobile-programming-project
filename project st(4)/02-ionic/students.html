@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدیریت دانشجویان - Ionic</title>
+  <!-- برای نمایش کامپوننت‌های Ionic به اینترنت نیاز است. -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@7/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@7/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@7/css/ionic.bundle.css">
+  <style>
+    body { font-family: Tahoma, Arial, sans-serif; }
+    ion-content { --background: #f4f7fb; }
+    .content-wrap { padding: 18px; }
+    .student-name { font-weight: 600; }
+    .hint { color: #687789; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <ion-app>
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>مدیریت دانشجویان</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class="content-wrap">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>ثبت دانشجوی جدید</ion-card-title>
+            <ion-card-subtitle>نام دانشجو را وارد کنید</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              <ion-input id="studentInput" label="نام دانشجو" label-placement="floating"
+                         placeholder="مثلاً علی رضایی" clear-input></ion-input>
+            </ion-item>
+            <ion-button expand="block" id="addButton" class="ion-margin-top">
+              ثبت دانشجو
+            </ion-button>
+            <p class="hint">نام واردشده به فهرست پایین اضافه می‌شود.</p>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>فهرست دانشجویان</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list id="studentList">
+              <ion-item><ion-label>هنوز دانشجویی ثبت نشده است.</ion-label></ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-content>
+  </ion-app>
+
+  <script>
+    const input = document.getElementById('studentInput');
+    const list = document.getElementById('studentList');
+    const button = document.getElementById('addButton');
+    let students = [];
+
+    button.addEventListener('click', () => {
+      const name = (input.value || '').trim();
+      if (!name) {
+        input.setFocus();
+        return;
+      }
+      students.push(name);
+      renderStudents();
+      input.value = '';
+    });
+
+    function renderStudents() {
+      list.innerHTML = '';
+      students.forEach((name, index) => {
+        const item = document.createElement('ion-item');
+        const label = document.createElement('ion-label');
+        label.className = 'student-name';
+        label.textContent = `${index + 1}. ${name}`;
+        item.appendChild(label);
+        list.appendChild(item);
+      });
+    }
+  </script>
+</body>
+</html>

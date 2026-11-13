@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+  <style>
+    .box{rx:18;stroke-width:3}
+    .t{font-family:Tahoma,Arial,sans-serif;font-size:25px;font-weight:bold;fill:#102a43;text-anchor:middle}
+    .sub{font-family:Tahoma,Arial,sans-serif;font-size:18px;fill:#243b53;text-anchor:middle}
+    .arrow{stroke:#334155;stroke-width:4;fill:none;marker-end:url(#arrow)}
+  </style>
+</defs>
+<rect width="1200" height="760" fill="#f8fafc"/>
+<text x="600" y="55" class="t" font-size="34">معماری ساده برنامه Cordova</text>
+<rect x="340" y="90" width="520" height="105" fill="#dbeafe" stroke="#2563eb" class="box"/>
+<text x="600" y="132" class="t">HTML</text><text x="600" y="166" class="sub">ساختار و محتوای صفحه</text>
+<path d="M600 195 V225" class="arrow"/>
+<rect x="340" y="230" width="520" height="105" fill="#dcfce7" stroke="#16a34a" class="box"/>
+<text x="600" y="272" class="t">CSS</text><text x="600" y="306" class="sub">ظاهر، رنگ‌ها و چیدمان</text>
+<path d="M600 335 V365" class="arrow"/>
+<rect x="340" y="370" width="520" height="105" fill="#fef3c7" stroke="#d97706" class="box"/>
+<text x="600" y="412" class="t">JavaScript</text><text x="600" y="446" class="sub">منطق و تعاملات برنامه</text>
+<path d="M600 475 V505" class="arrow"/>
+<rect x="340" y="510" width="520" height="95" fill="#ede9fe" stroke="#7c3aed" class="box"/>
+<text x="600" y="550" class="t">WebView</text><text x="600" y="580" class="sub">نمایش محتوای وب درون برنامه</text>
+<path d="M600 605 V635" class="arrow"/>
+<rect x="70" y="640" width="430" height="85" fill="#fee2e2" stroke="#dc2626" class="box"/>
+<text x="285" y="675" class="t">افزونه‌های بومی Cordova</text><text x="285" y="705" class="sub">دسترسی به قابلیت‌های دستگاه</text>
+<rect x="700" y="640" width="430" height="85" fill="#e2e8f0" stroke="#475569" class="box"/>
+<text x="915" y="675" class="t">سیستم‌عامل</text><text x="915" y="705" class="sub">Android / iOS</text>
+<path d="M500 682 H690" class="arrow"/>
+<path d="M915 640 V620 H860" class="arrow"/>
+<text x="600" y="748" class="sub">درخواست JavaScript از طریق افزونه به قابلیت بومی سیستم‌عامل می‌رسد.</text>
+</svg>
