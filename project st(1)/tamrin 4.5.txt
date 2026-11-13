@@ -1,0 +1,20 @@
+پاسخ تمرین ۴:
+برای اجرای یک عملیات پس از لمس دکمه، در Activity ابتدا دکمه را با findViewById پیدا می‌کنیم و سپس با setOnClickListener برای آن شنونده کلیک تعریف می‌کنیم. کد داخل متد onClick هنگام لمس دکمه اجرا می‌شود. برای مثال می‌توان متن ورودی را خواند و با Toast نمایش داد.
+
+نمونه:
+Button button = findViewById(R.id.showButton);
+button.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(MainActivity.this, "دکمه لمس شد", Toast.LENGTH_SHORT).show();
+    }
+});
+
+پاسخ تمرین ۵:
+- Java: زبان برنامه‌نویسی برای نوشتن منطق و دستورات برنامه است.
+- Android Studio: محیط توسعه (IDE) برای ساخت، ویرایش، اجرا و اشکال‌زدایی برنامه‌های اندرویدی است.
+- Android SDK: مجموعه ابزارها، کتابخانه‌ها و APIهای لازم برای ساخت و آزمایش برنامه‌های اندرویدی است.
+- Activity: یکی از اجزای اصلی اندروید است که معمولاً یک صفحه از رابط کاربری برنامه را مدیریت می‌کند.
+
+جمع‌بندی:
+Java زبان برنامه‌نویسی است، Android Studio محیط ساخت برنامه، Android SDK ابزارهای توسعه و Activity بخشی از ساختار برنامه اندرویدی برای مدیریت یک صفحه است.
